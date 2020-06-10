@@ -17,12 +17,24 @@ def calculate_order(pr, cashdis, perdiscount):
         shipping = 5.95
         total = subtotal + shipping + tax
         print(f'shipping:{shipping} \n' f'Sales tax: {tax} ')
-        return shipping
+        return total
     elif 10 < subtotal < 30:
         shipping = 7.95
         total = subtotal + shipping + tax
         print(f'shipping:{shipping} \n' f'Sales tax: {tax} ')
-        return shipping
+        return total
+    elif 30 < subtotal < 50:
+        shipping = 11.95
+        total = subtotal + shipping + tax
+        print(f'shipping:{shipping} \n' f'Sales tax: {tax} ')
+        return total
+    elif subtotal >= 50:
+        shipping = 0
+        total = subtotal + shipping + tax
+        print(f'shipping:{shipping} \n' f'Sales tax: {tax} ')
+        return total
+
+
 
 
 
