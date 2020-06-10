@@ -12,7 +12,7 @@ class MyTestCase(unittest.TestCase):
     def test_average_negative_exception(self):
         with self.assertRaises(ValueError):
             vw.average(-90, 89, 78)
-            #vw.average(90, -9, 45)
+            vw.average(90, -9, 45)
 
 
 
