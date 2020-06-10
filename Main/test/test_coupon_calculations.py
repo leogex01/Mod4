@@ -20,17 +20,30 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEqual(cc.calculate_order(10, 10, 20), 5.95, places=2)
         """
         # Next level of pricing  10 -30
+        """"
         self.assertAlmostEqual(cc.calculate_order(35, 5, 10), 7.95, places=2)
         self.assertAlmostEqual(cc.calculate_order(20, 5, 15), 7.95, places=2)
         self.assertAlmostEqual(cc.calculate_order(29, 5, 20), 7.95, places=2)
         self.assertAlmostEqual(cc.calculate_order(39, 10, 10), 7.95, places=2)
         self.assertAlmostEqual(cc.calculate_order(30, 10, 15), 7.95, places=2)
         self.assertAlmostEqual(cc.calculate_order(25, 10, 20), 7.95, places=2)
+        """
         # Next 30 - 50 level
+        """"
         self.assertAlmostEqual(cc.calculate_order(50, 5, 10), 11.95, places=2)
-        self.assertAlmostEqual(cc.calculate_order(45, 5, 15), 7.95, places=2)
-        self.assertAlmostEqual(cc.calculate_order(55, 5, 20), 7.95, places=2)
-        self.assertAlmostEqual(cc.calculate_order(48, 10, 10), 7.95, places=2)
+        self.assertAlmostEqual(cc.calculate_order(45, 5, 15), 11.95, places=2)
+        self.assertAlmostEqual(cc.calculate_order(55, 5, 20), 11.95, places=2)
+        self.assertAlmostEqual(cc.calculate_order(48, 10, 10), 11.95, places=2)
+        self.assertAlmostEqual(cc.calculate_order(49, 10, 15), 11.95, places=2)
+        self.assertAlmostEqual(cc.calculate_order(53, 10, 20), 11.95, places=2)
+        """
+        #50 and above level
+        self.assertAlmostEqual(cc.calculate_order(70, 5, 10),0., places=2)
+        self.assertAlmostEqual(cc.calculate_order(90, 5, 15), 0, places=2)
+        self.assertAlmostEqual(cc.calculate_order(100, 5, 20), 0, places=2)
+        self.assertAlmostEqual(cc.calculate_order(150, 10, 5), 0, places=2)
+        self.assertAlmostEqual(cc.calculate_order(250, 10, 15),0, places=2)
+        self.assertAlmostEqual(cc.calculate_order(150, 10, 20),0, places=2)
 
-if __name__ == '__main__':
-    unittest.main()
+    if __name__ == '__main__':
+       unittest.main()
