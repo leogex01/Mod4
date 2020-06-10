@@ -6,12 +6,19 @@ Small program to take three test scores and average them out
 """
 import unittest
 
-
-def average(score1, score2, score3):
+try:
+ def average(score1, score2, score3):
     NUMBER_TESTS = 3
+
     if score1 < 0 or score2 < 0 or score3 < 0:
-        raise ValueError("Only positive integers are allowed")
+        raise ValueError
     return float((score1 + score2 + score3) / NUMBER_TESTS)
+except ValueError:
+        ("Only positive integers are allowed")
+finally:
+    print('No exceptions')
+
+#return float((score1 + score2 + score3) / NUMBER_TESTS)
 
 
 if __name__ == '__main__':
