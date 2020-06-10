@@ -13,7 +13,11 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             vw.average(-90, 89, 78)
             vw.average(90, -9, 45)
-            vw.average(89, 10, -56)    
+            vw.average(89, 10, -56)
+
+    def test_average_string_exception(self):
+        with self.assertRaises(ValueError):
+            vw.average('som', 'e', 'string')
 
 
 
